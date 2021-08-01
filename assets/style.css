@@ -50,6 +50,12 @@ h3{
     object-fit: cover;  
 }
 
+.grid-screen1 a{
+    text-decoration: none;
+    color: inherit;
+
+}
+
 .product-box{
     width: 310px;
     height: 91px;
