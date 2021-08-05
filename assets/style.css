@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 :root{
     --primary: #0E5CDA;
     --black: #000E23;
@@ -11,18 +13,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    /* border: 2px solid red;  */
 }
 
 section.pattern{
     background-color: var(--background);
     font-size: 12px;
     height: 100vh;
-    /* width: 100vw; */
     color: var(--gray);
     padding: 40px 20px 40px 20px;
 }
 
+
+/* Page 1 */
 
 h1{
     color: var(--primary);
@@ -78,10 +80,10 @@ h3{
 
 .price{
     margin-top: 15px;
+    width: 100%;
 }
 
 .grid-screen1{
-    /* width: 100%; */
     margin: 0 auto;
     padding-top: 40px;
     display: grid;
@@ -121,19 +123,25 @@ h3{
 
 .product-view{
     background-color: #FFFFFF;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 12px 12px 16px;
     width: 100%;
     height: 65px;
     box-shadow: 2px 2px 3px 1px rgba(90, 108, 138, 0.096);
     border-radius: 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #screen-2 h2{
     margin: 0;
     width: 80%;
 }
+
+.price-2{
+    width: 40%;
+    text-align: right;
+}
+
 
 .product-show img{
     margin-top: 24px;
@@ -177,16 +185,21 @@ h3{
     width: 100%;
     padding: 5px;
     height: 40px;
-    border-radius: 4px;
+    border-radius: 8px;
     border: none;
     background-color: var(--primary);
     color: #FFFFFF; 
     box-shadow: 2px 2px 3px 1px rgba(90, 108, 138, 0.096);
 }
 
+.main-button:hover{
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
 /* page 3 */
 .box-3{
-    display: none;
+    /* display: none; */
     height: 54px;
     border-radius: 4px;
 }
@@ -309,61 +322,72 @@ h3{
         justify-content: space-between;
     }
 
+    .main-button{
+        max-width: 182px;
+        float: right;
+        border-radius: 8px;
+    }
+
+    .price{
+        text-align: left;
+    }
+
+
     #screen-2 h2{
         margin: 20px 0px;
         width: 30%;
     }
-
+    
+    .price-2{
+        text-align: none;
+    }
+    
     .box-3{
         width: 100%;
         height: 38px;
     }
 
-    
-.flex-text{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 10px;
-}
+        
+    .flex-text{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 10px;
+    }
 
-.flex-text-a{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+    .flex-text-a{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
-.flex-text-b{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-}
+    .flex-text-b{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
 
-.space-flex{
-    margin: 0px 20px;
-}
+    .space-flex{
+        margin: 0px 20px;
+    }
 
-.button-b{
-    width: 182px;
-    float: right;
-}
-
-.empty-box{
-    margin: 0 auto;
-    max-width: 414px;
-    height: 366px;
-    padding: 0 100px;
-}
+    .empty-box{
+        margin: 0 auto;
+        max-width: 414px;
+        height: 366px;
+        padding: 0 100px;
+    }
 
 
-.button-c{
-    width: 196px;
-    position: relative; 
-    bottom: 35px;
-}
+    .button-c{
+        width: 196px;
+        position: relative; 
+        bottom: 35px;
+        float: none;
+    }
 
 
 }

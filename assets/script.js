@@ -1,9 +1,9 @@
 let preco = 32.60;
-let value = parseInt(document.getElementById('number').value, 10);
 
+//Botões de incremento
 function incrementValue()
 {   
-    let value = parseInt(document.getElementById('number').value, 10);
+    let value = document.getElementById('number').value;
     value = isNaN(value) ? 0 : value;
     value++;
     document.getElementById('number').value = value;
@@ -11,7 +11,7 @@ function incrementValue()
 
 function decrementValue()
 {   
-    let value = parseInt(document.getElementById('number').value, 10);
+    let value = document.getElementById('number').value;
     if (value > 0){
     value = isNaN(value) ? 0 : value;
     value--;
@@ -20,21 +20,45 @@ function decrementValue()
     }
 }
 
+/*
+Testes de query selector
+
+let box = document.querySelector('#box-3');
+box.
+console.log(box);
+
+let total = window.document.getElementsByClassName('total'); //pega
+value = 3;
+total.innerHTML = `Total: R$ ${Number(preco*value).toFixed(2)}`; //altera mas nao aplica
+console.log(total);
+*/
+
+/* Lógica de fluxo 
+
 function showProduct(n = 1){
     let box = document.querySelector('.box-3');
     box.style.display = 'block';
     return (box*n);
 }
 
+
 function carrinho(){
     if (value > 0){
+        value = isNaN(value) ? 0 : value;
         screen3 = document.querySelector('#screen-3');
-        screen3.appendChild(showProduct(value));
+        screen3.appendChild(showProduct(1));
 
-        total = document.querySelector('.total');
-        total.innerText = `R$ ${Number(preco*value).toFixed(2)}`;
+        let total = window.document.getElementsByClassName('total');
+        console.log(total + "teste");
+        total.innerText = `Total: R$ ${Number(preco*value).toFixed(2)}`;
     }
 }
+
+
+let total = window.document.getElementsByClassName('total');
+console.log(this.total + "teste");
+
+carrinho();
 
 function carrinhoRoute(){
     rota = document.querySelector('.link-carrinho');
@@ -47,12 +71,5 @@ function carrinhoRoute(){
     }
 }
 
-
-
-/*
-pagina 1 - clica e vai pra page 2
-page 2 - o numero do value é o numero de boxes que aparecem na pagina 3
-se o numero é > 0, vai pra pagina 3, senao, vai pra pagina 4
-pagina 3 - numero de boxes = numero do value
-valor final = value*preco
 */
+
